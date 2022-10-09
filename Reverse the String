@@ -1,0 +1,19 @@
+import java.util.* ;
+import java.io.*; 
+public class Solution {	
+	public static void main(String args[]) {
+		Scanner s=new Scanner(System.in);
+        String str=s.nextLine();
+        String d=reverseString(str);
+        System.out.println(d);
+	}
+    static String reverseString(String str)
+    {
+        String e="";
+        for(int i=0;i<=str.length()-1;i++)
+        {
+            e=str.charAt(i)+e;
+}
+    return e;
+}
+}
