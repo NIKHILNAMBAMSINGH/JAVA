@@ -1,0 +1,45 @@
+
+Counting Spaces
+We handle a simple corner case that if the length of the string is 0 we return 0 immediately.
+Next, we count the number of spaces in the sentence.
+Since it is given that every pair of words is separated by a space character so our final sequence will look like word [space] word [space] … [word].
+Hence, if the total words are W, the count of space characters is W - 1.
+We store the count of spaces inside a variable count and return count + 1 as the total number of words.
+
+
+
+
+
+
+
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		String str="tomba is a bad boy";
+		int output=count(str);
+		System.out.println(output);
+	}
+	
+	static int count(String str)
+	{
+	    if(str.length()==0)
+		{
+		    return 0;
+		}
+		int space=0;
+		System.out.println(str.length());
+		for(int i=0;i<str.length();i++)
+		{
+		    if(str.charAt(i)==' ')
+		    {
+		        //System.out.println(str.charAt(i));
+		        space++;
+		    }
+		    System.out.print(str.charAt(i));
+		}
+		return space+1;
+	}
+
+}
